@@ -41,6 +41,7 @@ public:
 	TSubclassOf<class ABallProjectile> ProjectileClass;
 
 	/** Fires a projectile. */
+	UFUNCTION(BlueprintCallable, Category = Gameplay)
 	void OnFire();
 
 	/** Sound to play each time we fire */
