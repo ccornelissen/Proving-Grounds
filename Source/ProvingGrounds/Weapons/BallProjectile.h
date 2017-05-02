@@ -19,6 +19,10 @@ class ABallProjectile : public AActor
 public:
 	ABallProjectile();
 
+	/** Projectiles base damage */
+	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = "Damage")
+	float fProjectileDamage = 20.0f;
+
 	/** called when projectile hits something */
 	UFUNCTION()
 	void OnHit(UPrimitiveComponent* HitComp, AActor* OtherActor, UPrimitiveComponent* OtherComp, FVector NormalImpulse, const FHitResult& Hit);

@@ -23,6 +23,10 @@ class AGuardCharacter : public ACharacter
 public:
 	AGuardCharacter();
 
+	/** GuardBaseHealth */
+	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = "Character")
+	float fMaxHealth = 100.0f;
+
 	/** Base turn rate, in deg/sec. Other scaling may affect final turn rate. */
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category=Camera)
 	float BaseTurnRate;
