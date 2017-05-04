@@ -3,6 +3,8 @@
 #include "GameFramework/Character.h"
 #include "GuardCharacter.generated.h"
 
+class AGun;
+
 UCLASS(config=Game)
 class AGuardCharacter : public ACharacter
 {
@@ -36,6 +38,8 @@ public:
 	float BaseLookUpRate;
 
 protected:
+
+	void OnFire();
 
 	/** Resets HMD orientation in VR. */
 	void OnResetVR();

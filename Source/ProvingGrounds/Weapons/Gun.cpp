@@ -53,6 +53,7 @@ void AGun::OnFire()
 
 			// spawn the projectile at the muzzle
 			World->SpawnActor<ABallProjectile>(ProjectileClass, SpawnLocation, SpawnRot, ActorSpawnParams);
+
 		}
 	}
 

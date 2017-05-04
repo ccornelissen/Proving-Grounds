@@ -54,6 +54,7 @@ void AFirstPersonCharacter::BeginPlay()
 
 	//Spawn the players gun
 	UWorld* const World = GetWorld();
+
 	if (GunBP != nullptr && World != nullptr)
 	{
 		FVector SpawnLocation = GetActorLocation();

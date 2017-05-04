@@ -3,6 +3,8 @@
 #include "ProvingGrounds.h"
 #include "Kismet/HeadMountedDisplayFunctionLibrary.h"
 #include "GuardCharacter.h"
+#include "Weapons/Gun.h"
+#include "Components/ChildActorComponent.h"
 
 //////////////////////////////////////////////////////////////////////////
 // AGuardCharacter
@@ -62,15 +64,7 @@ void AGuardCharacter::SetupPlayerInputComponent(class UInputComponent* PlayerInp
 	PlayerInputComponent->BindAxis("TurnRate", this, &AGuardCharacter::TurnAtRate);
 	PlayerInputComponent->BindAxis("LookUp", this, &APawn::AddControllerPitchInput);
 	PlayerInputComponent->BindAxis("LookUpRate", this, &AGuardCharacter::LookUpAtRate);
-
-	// handle touch devices
-	PlayerInputComponent->BindTouch(IE_Pressed, this, &AGuardCharacter::TouchStarted);
-	PlayerInputComponent->BindTouch(IE_Released, this, &AGuardCharacter::TouchStopped);
-
-	// VR headset functionality
-	PlayerInputComponent->BindAction("ResetVR", IE_Pressed, this, &AGuardCharacter::OnResetVR);
 }
-
 
 void AGuardCharacter::OnResetVR()
 {
